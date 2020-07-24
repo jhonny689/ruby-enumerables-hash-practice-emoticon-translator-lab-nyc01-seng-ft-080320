@@ -11,8 +11,9 @@ def load_library
   library
 end
 
-def get_japanese_emoticon ()
+def get_japanese_emoticon (western_emoticon)
   # code goes here
+  
 end
 
 def get_english_meaning
