@@ -11,6 +11,7 @@ def load_library(path)
     library[emoticon][:english] = translation[0]
     library[emoticon][:japanese] = translation[1]
   }
+  
   library
 end
 
