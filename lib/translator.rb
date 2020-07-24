@@ -1,9 +1,8 @@
 # require modules here
-
-def load_library
+library = {}
+def load_library(path)
   # code goes here
-  library = {}
-  emoticons = YAML.load_file('emoticons.yml')
+  emoticons = YAML.load_file(path)
   emoticons.each{ |emoticon, translation|
     library[emoticon][:english] = translation[0]
     library[emoticon][:japanese] = translation[1]
