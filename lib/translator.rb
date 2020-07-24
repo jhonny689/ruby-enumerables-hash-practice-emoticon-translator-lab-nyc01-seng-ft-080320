@@ -8,6 +8,7 @@ def load_library(path)
   emoticons = YAML.load_file(path)
   binding.pry
   emoticons.each{ |emoticon, translation|
+  binding.pry
     library[emoticon][:english] = translation[0]
     library[emoticon][:japanese] = translation[1]
   }
