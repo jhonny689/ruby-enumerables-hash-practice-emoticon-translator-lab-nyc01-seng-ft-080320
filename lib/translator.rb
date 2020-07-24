@@ -14,12 +14,17 @@ end
 def get_japanese_emoticon (path, western_emoticon)
   # code goes here
   library = load_library(path)
-  library.each { |sign|
-    if sign[:english] == western_emoticon
-      return sign[:japanese]
+  library.each { |meaning, translations|
+    if translations[:english] == western_emoticon
+      return translations[:japanese]
   }
 end
 
-def get_english_meaning
+def get_english_meaning (path, japanese_emoticon)
   # code goes here
+  library = load_library(path)
+  library.each { |meaning, translations|
+    if translations[:japanese] == japanese_emoticon
+      return meaning
+  }
 end
